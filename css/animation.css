@@ -1,0 +1,358 @@
+/*==================================================
+  MOBILEHUB
+  animations.css
+==================================================*/
+
+/*==========================================
+FADE IN
+==========================================*/
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+}
+
+.fade-in {
+
+    animation: fadeIn .8s ease forwards;
+
+}
+
+/*==========================================
+SLIDE UP
+==========================================*/
+
+@keyframes slideUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.slide-up {
+
+    animation: slideUp .8s ease forwards;
+
+}
+
+/*==========================================
+SLIDE LEFT
+==========================================*/
+
+@keyframes slideLeft {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+.slide-left {
+
+    animation: slideLeft .8s ease forwards;
+
+}
+
+/*==========================================
+SLIDE RIGHT
+==========================================*/
+
+@keyframes slideRight {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateX(-40px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateX(0);
+
+    }
+
+}
+
+.slide-right {
+
+    animation: slideRight .8s ease forwards;
+
+}
+
+/*==========================================
+FLOAT
+==========================================*/
+
+@keyframes float {
+
+    0% {
+
+        transform: translateY(0);
+
+    }
+
+    50% {
+
+        transform: translateY(-12px);
+
+    }
+
+    100% {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+.float {
+
+    animation: float 4s ease-in-out infinite;
+
+}
+
+/*==========================================
+ZOOM
+==========================================*/
+
+@keyframes zoomIn {
+
+    from {
+
+        opacity: 0;
+
+        transform: scale(.9);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: scale(1);
+
+    }
+
+}
+
+.zoom-in {
+
+    animation: zoomIn .5s ease;
+
+}
+
+/*==========================================
+BUTTON HOVER
+==========================================*/
+
+.btn {
+
+    transition: all .3s ease;
+
+}
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+}
+
+/*==========================================
+CARD HOVER
+==========================================*/
+
+.card,
+
+.product-card,
+
+.contact-card,
+
+.brand-card {
+
+    transition: all .35s ease;
+
+}
+
+.card:hover,
+
+.product-card:hover,
+
+.contact-card:hover,
+
+.brand-card:hover {
+
+    transform: translateY(-8px);
+
+}
+
+/*==========================================
+IMAGE ZOOM
+==========================================*/
+
+.product-image {
+
+    overflow: hidden;
+
+}
+
+.product-image img {
+
+    transition: transform .4s ease;
+
+}
+
+.product-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+/*==========================================
+LINK UNDERLINE
+==========================================*/
+
+.nav-links a {
+
+    transition: .3s;
+
+}
+
+.nav-links a:hover {
+
+    color: var(--accent);
+
+}
+
+/*==========================================
+SOCIAL ICONS
+==========================================*/
+
+.footer-social a,
+
+.social-links a {
+
+    transition: .3s ease;
+
+}
+
+.footer-social a:hover,
+
+.social-links a:hover {
+
+    transform: translateY(-4px);
+
+}
+
+/*==========================================
+SCROLL REVEAL
+==========================================*/
+
+.reveal {
+
+    opacity: 0;
+
+    transform: translateY(50px);
+
+    transition: all .8s ease;
+
+}
+
+.reveal.active {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+}
+
+/*==========================================
+LOADING SPINNER
+==========================================*/
+
+@keyframes spin {
+
+    from {
+
+        transform: rotate(0);
+
+    }
+
+    to {
+
+        transform: rotate(360deg);
+
+    }
+
+}
+
+.spinner {
+
+    animation: spin 1s linear infinite;
+
+}
+
+/*==========================================
+MODAL ANIMATION
+==========================================*/
+
+@keyframes modalOpen {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(30px) scale(.95);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0) scale(1);
+
+    }
+
+}
+
+.modal-content {
+
+    animation: modalOpen .35s ease;
+
+}

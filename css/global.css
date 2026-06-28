@@ -1,0 +1,474 @@
+/*==================================================
+  MOBILEHUB
+  global.css
+==================================================*/
+
+/*==================================================
+  GOOGLE FONT
+==================================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
+/*==================================================
+  RESET
+==================================================*/
+
+*,
+*::before,
+*::after {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+body {
+
+    font-family: var(--font-family);
+
+    background: var(--background);
+
+    color: var(--text);
+
+    line-height: 1.7;
+
+    overflow-x: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+}
+
+a {
+
+    color: inherit;
+
+    text-decoration: none;
+
+}
+
+ul {
+
+    list-style: none;
+
+}
+
+button,
+input,
+textarea,
+select {
+
+    font: inherit;
+
+}
+
+button {
+
+    cursor: pointer;
+
+    border: none;
+
+    background: none;
+
+}
+
+input,
+textarea,
+select {
+
+    outline: none;
+
+}
+
+
+/*==================================================
+  CONTAINER
+==================================================*/
+
+.container {
+
+    width: min(92%, var(--container-width));
+
+    margin-inline: auto;
+
+}
+
+
+/*==================================================
+  SECTIONS
+==================================================*/
+
+section {
+
+    padding: 90px 0;
+
+}
+
+
+/*==================================================
+  TYPOGRAPHY
+==================================================*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+
+    color: var(--text);
+
+    line-height: 1.2;
+
+    font-weight: var(--fw-bold);
+
+}
+
+h1 {
+
+    font-size: clamp(2.8rem, 5vw, 4rem);
+
+}
+
+h2 {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+}
+
+h3 {
+
+    font-size: 1.4rem;
+
+}
+
+p {
+
+    color: var(--text-light);
+
+}
+
+
+/*==================================================
+  SECTION TITLE
+==================================================*/
+
+.section-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+.section-title span {
+
+    display: inline-block;
+
+    color: var(--accent);
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+.section-title h2 {
+
+    margin-bottom: 15px;
+
+}
+
+.section-title p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+}
+
+
+/*==================================================
+  BUTTONS
+==================================================*/
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 15px 34px;
+
+    border-radius: var(--radius);
+
+    background: var(--primary);
+
+    color: #fff;
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn:hover {
+
+    background: var(--accent);
+
+    transform: translateY(-3px);
+
+}
+
+.btn-outline {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 15px 34px;
+
+    border-radius: var(--radius);
+
+    border: 2px solid var(--primary);
+
+    color: var(--primary);
+
+    font-weight: 600;
+
+    transition: var(--transition);
+
+}
+
+.btn-outline:hover {
+
+    background: var(--primary);
+
+    color: #fff;
+
+}
+
+
+/*==================================================
+  CARD
+==================================================*/
+
+.card {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius-lg);
+
+    box-shadow: var(--shadow-sm);
+
+    transition: var(--transition);
+
+}
+
+.card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+
+/*==================================================
+  PAGE HERO
+==================================================*/
+
+.page-banner {
+
+    background:
+        radial-gradient(circle at top right, #FFE8D6 0%, transparent 35%),
+        radial-gradient(circle at bottom left, #DBEAFE 0%, transparent 30%),
+        var(--surface);
+
+    text-align: center;
+
+    padding: 120px 0 80px;
+
+}
+
+.hero-tag {
+
+    display: inline-block;
+
+    padding: 10px 18px;
+
+    background: #FFF7ED;
+
+    color: var(--accent);
+
+    border-radius: var(--radius-round);
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+}
+
+.page-banner h1 {
+
+    margin-bottom: 20px;
+
+}
+
+.page-banner p {
+
+    max-width: 650px;
+
+    margin: auto;
+
+    font-size: 1.05rem;
+
+}
+
+
+/*==================================================
+  FORM ELEMENTS
+==================================================*/
+
+input,
+textarea,
+select {
+
+    width: 100%;
+
+    padding: 15px 18px;
+
+    background: #fff;
+
+    border: 1px solid var(--border);
+
+    border-radius: var(--radius);
+
+    transition: var(--transition);
+
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    border-color: var(--accent);
+
+    box-shadow: 0 0 0 4px rgba(249, 115, 22, .12);
+
+}
+
+
+/*==================================================
+  SCROLLBAR
+==================================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #f3f4f6;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+
+    border-radius: 20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: var(--accent);
+
+}
+
+
+/*==================================================
+  UTILITIES
+==================================================*/
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+
+    margin-top: 1rem;
+
+}
+
+.mt-2 {
+
+    margin-top: 2rem;
+
+}
+
+.mt-3 {
+
+    margin-top: 3rem;
+
+}
+
+.mb-1 {
+
+    margin-bottom: 1rem;
+
+}
+
+.mb-2 {
+
+    margin-bottom: 2rem;
+
+}
+
+.mb-3 {
+
+    margin-bottom: 3rem;
+
+}
+
+.hidden {
+
+    display: none;
+
+}

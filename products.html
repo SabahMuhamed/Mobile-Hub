@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Products | MobileHub</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/products.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="container">
+
+            <nav class="navbar" aria-label="Main Navigation">
+
+                <a href="index.html" class="logo">
+
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                    MobileHub
+
+                </a>
+
+                <ul class="nav-links">
+
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="products.html" class="active">Products</a></li>
+
+                    <li><a href="contact.html">Contact</a></li>
+
+                </ul>
+
+                <button class="menu-toggle" aria-label="Open Navigation Menu">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+
+            <div class="container">
+
+                <h1>Browse Smartphones</h1>
+
+                <p>
+
+                    Explore the latest smartphones from trusted brands.
+
+                </p>
+
+            </div>
+
+        </section>
+
+        <section class="products-page">
+
+            <div class="container">
+
+                <div class="products-toolbar">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input id="searchInput" type="search" placeholder="Search smartphones..."
+                            aria-label="Search Products">
+
+                    </div>
+
+                    <div class="price-filter">
+
+                        <label for="priceFilter">
+
+                            <i class="fa-solid fa-indian-rupee-sign"></i>
+
+                            Price Range
+
+                        </label>
+
+                        <div class="select-wrapper">
+
+                            <select id="priceFilter">
+
+                                <option value="all">All Prices</option>
+
+                                <option value="0-30000">Below ₹30,000</option>
+
+                                <option value="30000-50000">₹30,000 – ₹50,000</option>
+
+                                <option value="50000-70000">₹50,000 – ₹70,000</option>
+
+                                <option value="70000-100000">₹70,000 – ₹1,00,000</option>
+
+                                <option value="100000">Above ₹1,00,000</option>
+
+                            </select>
+
+                            <i class="fa-solid fa-chevron-down"></i>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="brand-filter">
+
+                    <button class="chip active" data-brand="All">All</button>
+
+                    <button class="chip" data-brand="Apple">Apple</button>
+
+                    <button class="chip" data-brand="Samsung">Samsung</button>
+
+                    <button class="chip" data-brand="Google">Google</button>
+
+                    <button class="chip" data-brand="OnePlus">OnePlus</button>
+
+                    <button class="chip" data-brand="Nothing">Nothing</button>
+
+                    <button class="chip" data-brand="Xiaomi">Xiaomi</button>
+
+                </div>
+
+                <div class="products-header">
+
+                    <h3>
+
+                        <span id="productCount">0</span>
+
+                        Products Available
+
+                    </h3>
+
+                </div>
+
+                <div id="productsContainer" class="product-grid" aria-live="polite">
+
+                </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
+        <div id="productModal" class="product-modal">
+
+            <div class="modal-content">
+
+                <button id="closeModal" class="close-modal">
+
+                    ✕
+
+                </button>
+
+                <div class="modal-grid">
+
+                    <div class="modal-image">
+
+                        <img id="modalImage">
+
+                    </div>
+
+                    <div class="modal-details">
+
+                        <span id="modalBadge" class="product-badge"></span>
+
+                        <h2 id="modalName"></h2>
+
+                        <h3 id="modalPrice"></h3>
+
+                        <p id="modalDescription"></p>
+
+                        <table class="spec-table">
+
+                            <tr>
+
+                                <th>Brand</th>
+
+                                <td id="modalBrand"></td>
+
+                            </tr>
+
+                            <tr>
+                                <th>Color</th>
+                                <td id="modalColor"></td>
+                            </tr>
+
+                            <tr>
+
+                                <th>Storage</th>
+
+                                <td id="modalStorage"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>RAM</th>
+
+                                <td id="modalRam"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>Display</th>
+
+                                <td id="modalDisplay"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>Processor</th>
+
+                                <td id="modalProcessor"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>Rear Camera</th>
+
+                                <td id="modalCamera"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>Battery</th>
+
+                                <td id="modalBattery"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>OS</th>
+
+                                <td id="modalOS"></td>
+
+                            </tr>
+
+                            <tr>
+
+                                <th>Warranty</th>
+
+                                <td id="modalWarranty"></td>
+
+                            </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <div class="container">
+
+            <p class="copyright">
+
+                © 2026 MobileHub. All Rights Reserved.
+
+            </p>
+
+        </div>
+
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/products.js"></script>
+
+</body>
+
+</html>

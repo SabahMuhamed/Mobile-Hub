@@ -1,0 +1,636 @@
+/*==================================================
+  MOBILEHUB
+  products.css
+==================================================*/
+
+/*==========================================
+PRODUCTS PAGE
+==========================================*/
+
+.products-page {
+
+    padding: 80px 0;
+
+    background: var(--background);
+
+}
+
+/*==========================================
+FILTER PANEL
+==========================================*/
+
+.filter-panel {
+
+    background: var(--surface);
+
+    border: 1px solid var(--border);
+
+    border-radius: 24px;
+
+    padding: 35px;
+
+    margin-bottom: 50px;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+/*==========================================
+SEARCH
+==========================================*/
+
+.search-box {
+
+    position: relative;
+
+    margin-bottom: 35px;
+
+}
+
+.search-box input {
+
+    width: 100%;
+
+    height: 58px;
+
+    padding: 0 20px 0 55px;
+
+    border-radius: 16px;
+
+}
+
+.search-box i {
+
+    position: absolute;
+
+    left: 20px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-light);
+
+}
+
+/*==========================================
+FILTER GRID
+==========================================*/
+
+.filter-grid {
+
+    display: grid;
+
+    grid-template-columns: 280px 1fr;
+
+    gap: 40px;
+
+    margin-bottom: 30px;
+
+}
+
+.filter-group label {
+
+    display: block;
+
+    margin-bottom: 12px;
+
+    font-weight: 600;
+
+    color: var(--text);
+
+}
+
+.filter-group label i {
+
+    margin-right: 8px;
+
+    color: var(--accent);
+
+}
+
+/*==========================================
+PRICE FILTER
+==========================================*/
+
+.price-filter {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+.select-wrapper {
+
+    position: relative;
+
+}
+
+.select-wrapper select {
+
+    appearance: none;
+
+    background: white;
+
+    cursor: pointer;
+
+    padding-right: 50px;
+
+}
+
+.select-wrapper::after {
+
+    content: "▼";
+
+    position: absolute;
+
+    right: 18px;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: var(--text-light);
+
+    pointer-events: none;
+
+    font-size: 12px;
+
+}
+
+/*==========================================
+BRAND CHIPS
+==========================================*/
+
+.brand-filter {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+.chip {
+
+    padding: 12px 22px;
+
+    border-radius: 999px;
+
+    border: 1px solid var(--border);
+
+    background: #fff;
+
+    color: var(--text);
+
+    transition: .3s;
+
+    font-weight: 500;
+
+}
+
+.chip:hover {
+
+    border-color: var(--primary);
+
+    color: var(--primary);
+
+}
+
+.chip.active {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    border-color: var(--primary);
+
+}
+
+/*==========================================
+PRODUCT COUNT
+==========================================*/
+
+.products-header {
+
+    border-top: 1px solid var(--border);
+
+    padding-top: 25px;
+
+}
+
+.result-count {
+
+    font-size: 15px;
+
+    color: var(--text-light);
+
+}
+
+.result-count strong {
+
+    color: var(--primary);
+
+    font-size: 22px;
+
+}
+
+/*==========================================
+GRID
+==========================================*/
+
+.product-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+    gap: 30px;
+
+}
+
+/*==========================================
+PRODUCT CARD
+==========================================*/
+
+.product-card {
+
+    background: #fff;
+
+    border-radius: 22px;
+
+    border: 1px solid var(--border);
+
+    overflow: hidden;
+
+    transition: .35s;
+
+    box-shadow: var(--shadow-sm);
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: var(--shadow-lg);
+
+}
+
+/*==========================================
+IMAGE
+==========================================*/
+
+.product-image {
+
+    position: relative;
+
+    background: #F8FAFC;
+
+    padding: 35px;
+
+    overflow: hidden;
+
+}
+
+.product-image img {
+
+    height: 240px;
+
+    object-fit: contain;
+
+    transition: .35s;
+
+}
+
+.product-card:hover img {
+
+    transform: scale(1.05);
+
+}
+
+/*==========================================
+BADGE
+==========================================*/
+
+.product-badge {
+
+    position: absolute;
+
+    top: 18px;
+
+    left: 18px;
+
+    background: var(--accent);
+
+    color: #fff;
+
+    font-size: 12px;
+
+    padding: 7px 14px;
+
+    border-radius: 999px;
+
+    font-weight: 600;
+
+}
+
+/*==========================================
+CONTENT
+==========================================*/
+
+.product-content {
+
+    padding: 25px;
+
+}
+
+.product-brand {
+
+    color: var(--text-light);
+
+    font-size: 14px;
+
+    margin-bottom: 8px;
+
+}
+
+.product-name {
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+
+    min-height: 52px;
+
+}
+
+.product-price {
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: var(--primary);
+
+    margin-bottom: 22px;
+
+}
+
+.product-btn {
+
+    width: 100%;
+
+}
+
+/*==========================================
+PRODUCT MODAL
+==========================================*/
+
+.product-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, .65);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    z-index: 9999;
+
+}
+
+.product-modal.active {
+
+    display: flex;
+
+}
+
+.modal-content {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    height: 85vh;
+
+    background: #fff;
+
+    border-radius: 24px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    animation: modalOpen .35s ease;
+
+}
+
+.close-modal {
+
+    position: absolute;
+
+    top: 20px;
+
+    right: 20px;
+
+    width: 45px;
+
+    height: 45px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f3f4f6;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+    z-index: 5;
+
+}
+
+.close-modal:hover {
+
+    background: #ef4444;
+
+    color: #fff;
+
+}
+
+.modal-grid {
+
+    display: grid;
+
+    grid-template-columns: 45% 55%;
+
+    height: 100%;
+
+}
+
+/*==========================================
+LEFT IMAGE
+==========================================*/
+
+.modal-image {
+
+    background: #F8FAFC;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px;
+
+}
+
+.modal-image img {
+
+    max-width: 100%;
+
+    max-height: 420px;
+
+    object-fit: contain;
+
+}
+
+/*==========================================
+RIGHT SIDE
+==========================================*/
+
+.modal-details {
+
+    padding: 40px;
+
+    overflow-y: auto;
+
+}
+
+.modal-details::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+.modal-details::-webkit-scrollbar-thumb {
+
+    background: #cbd5e1;
+
+    border-radius: 20px;
+
+}
+
+.modal-details h2 {
+
+    margin-bottom: 10px;
+
+}
+
+.modal-details h3 {
+
+    color: var(--accent);
+
+    font-size: 30px;
+
+    margin-bottom: 20px;
+
+}
+
+.modal-details p {
+
+    margin-bottom: 25px;
+
+    line-height: 1.7;
+
+}
+
+/*==========================================
+TABLE
+==========================================*/
+
+.spec-table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+
+}
+
+.spec-table th {
+
+    width: 35%;
+
+    text-align: left;
+
+    background: #F8FAFC;
+
+    padding: 14px;
+
+    font-weight: 600;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+.spec-table td {
+
+    padding: 14px;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+/*==========================================
+MOBILE
+==========================================*/
+
+@media(max-width:900px) {
+
+    .modal-content {
+
+        width: 95%;
+
+        height: 90vh;
+
+    }
+
+    .modal-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .modal-image {
+
+        padding: 25px;
+
+        height: 260px;
+
+    }
+
+    .modal-image img {
+
+        max-height: 200px;
+
+    }
+
+}
