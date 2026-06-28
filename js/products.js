@@ -36,7 +36,7 @@ function createProductCard(product) {
 
     return `
 
-    <div class="product-card">
+    <div class="product-card" onclick="openProduct(${product.id})">
 
         <div class="product-image">
 
@@ -46,7 +46,7 @@ function createProductCard(product) {
 
             </span>
 
-            <img src="${product.image}" alt="${product.name}">
+            <img src="${product.image}" alt="${product.name}" loading="lazy">
 
         </div>
 
@@ -69,14 +69,6 @@ function createProductCard(product) {
                 ${formatPrice(product.price)}
 
             </p>
-
-            <button
-                class="btn product-btn"
-                onclick="openProduct(${product.id})">
-
-                View Details
-
-            </button>
 
         </div>
 

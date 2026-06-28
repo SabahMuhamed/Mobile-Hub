@@ -634,3 +634,74 @@ MOBILE
     }
 
 }
+
+.product-card {
+
+    cursor: pointer;
+
+    transition: transform .3s ease,
+        box-shadow .3s ease;
+
+}
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .12);
+
+}
+
+.product-card:active {
+
+    transform: scale(.98);
+
+}
+
+.product-image {
+
+    overflow: hidden;
+
+}
+
+.product-image img {
+
+    transition: transform .35s ease;
+
+}
+
+.product-card:hover .product-image img {
+
+    transform: scale(1.08);
+
+}
+
+.view-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    background: rgba(0, 0, 0, .35);
+
+    color: #fff;
+
+    font-size: 30px;
+
+    opacity: 0;
+
+    transition: .3s;
+
+}
+
+.product-card:hover .view-overlay {
+
+    opacity: 1;
+
+}
